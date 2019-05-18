@@ -58,6 +58,7 @@ tsc;
 
 git init;
 git add *;
+git add .gitignore;
 git commit -m "Initial";
 
 echo "git remote add origin git@github.com:$userName/$pkgName.git";
