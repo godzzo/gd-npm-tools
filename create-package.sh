@@ -2,6 +2,7 @@
 
 pkgName="$1";
 dirName=`dirname "$0"`;
+userName=`whoami`;
 
 echo "$dirName";
 echo ">>> Hello :)";
@@ -54,5 +55,12 @@ tee tsconfig.json <<EOF
 EOF
 
 tsc;
+
+git init;
+git add *;
+git commit -m "Initial";
+
+echo "git remote add origin git@github.com:$userName/$pkgName.git";
+echo "git push --set-upstream origin master";
 
 echo ">>> Bye :)";
